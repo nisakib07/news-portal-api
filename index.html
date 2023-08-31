@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Portal</title>
+
+    <!-- Tailwind and DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--Font Awesome-->
+    <script
+      src="https://kit.fontawesome.com/83b4fe29a5.js"
+      crossorigin="anonymous"></script>
+
+    <style>
+      .active {
+        color: red;
+      }
+    </style>
+  </head>
+  <body class="max-w-screen-xl mx-auto">
+    <header>
+      <h1 class="text-4xl text-sky-600">News Portal</h1>
+    </header>
+    <main>
+      <!-- Tabs -->
+      <section>
+        <div class="tabs text-lg flex justify-center" id="tabs-container"></div>
+      </section>
+
+      <!-- Sort Button -->
+
+      <div class="mt-6 flex justify-between">
+        <button onclick="sortHandler()" class="btn btn-outline btn-info">
+          Sort By Date
+        </button>
+        <button onclick="todayHandler()" class="btn btn-outline btn-success">
+          Today's Pick
+        </button>
+        <button onclick="trendingHandler()" class="btn btn-outline btn-error">
+          Trending
+        </button>
+      </div>
+
+      <!-- News -->
+      <section>
+        <div id="news-container" class="news-container"></div>
+      </section>
+    </main>
+    <footer></footer>
+    <!-- JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
